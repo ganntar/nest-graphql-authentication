@@ -46,4 +46,6 @@ export class UserResolver {
     await this.userService.deleteUser(id);
     return true;
   }
+
+  
 }

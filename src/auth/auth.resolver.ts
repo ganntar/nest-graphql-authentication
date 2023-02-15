@@ -17,4 +17,11 @@ export class AuthResolver {
             token: response.token
         }
     }
+
+    @Mutation(() => String)
+    public async forgotPassword(
+        @Args('email') email: string
+    ): Promise<String>{
+        return await this.authService.forgotPassword(email);
+    }
 }
